@@ -1,3 +1,4 @@
+-- SQLBook: Code
 DROP DATABASE parkinglot;
 
 CREATE DATABASE ParkingLot;
