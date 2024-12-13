@@ -44,7 +44,7 @@ CREATE TABLE Park (
     ParkID INT AUTO_INCREMENT PRIMARY KEY,
     ParkName VARCHAR(20),
     Status VARCHAR(20),
-    Container INT
+    Capacity INT
 );
 
 -- Table: ParkingSpot (Vị trí đỗ xe)
@@ -55,6 +55,18 @@ CREATE TABLE ParkingSpot (
     ParkID INT,
     FOREIGN KEY (ParkID) REFERENCES Park(ParkID)
 );
+
+-- Table: ParkingAssignment (Gán vị trí đỗ)
+CREATE TABLE ParkingAssignment (
+    AssignmentID INT AUTO_INCREMENT PRIMARY KEY,
+    LicensePlate VARCHAR(15),
+    ParkingSpotID INT,
+    StartTime DATETIME,
+    EndTime DATETIME,
+    FOREIGN KEY (LicensePlate) REFERENCES Vehicles(LicensePlate),
+    FOREIGN KEY (ParkingSpotID) REFERENCES ParkingSpot(ParkingSpotID)
+);
+
 
 -- Table: Shifts (Ca làm việc)
 CREATE TABLE Shifts (
