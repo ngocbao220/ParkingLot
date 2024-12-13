@@ -1,9 +1,9 @@
 -- SQLBook: Code
-DROP DATABASE parkinglot;
-=======
+DROP DATABASE IF EXISTS parkinglot;
+
 -- Xóa cơ sở dữ liệu ParkingLot nếu đã tồn tại để tạo mới
 DROP DATABASE IF EXISTS ParkingLot;
->>>>>>> main
+
 
 -- Tạo cơ sở dữ liệu ParkingLot
 CREATE DATABASE ParkingLot;

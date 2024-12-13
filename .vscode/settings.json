@@ -6,62 +6,10 @@
         "enableSsl": "Disabled"
       },
       "previewLimit": 50,
-      "server": "127.0.0.1",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "connect to parkinglot",
-      "database": "parkinglot",
-      "username": "ngocbao"
-    },
-    {
-      "mysqlOptions": {
-        "authProtocol": "default",
-        "enableSsl": "Disabled"
-      },
-      "previewLimit": 50,
       "server": "localhost",
       "port": 3306,
       "driver": "MySQL",
       "name": "ParkingLot",
-      "database": "parkinglot",
-      "username": "root"
-    },
-    {
-      "mysqlOptions": {
-        "authProtocol": "default",
-        "enableSsl": "Disabled"
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "parkinglot",
-      "database": "ParkingLot",
-      "username": "root"
-    },
-    {
-      "mysqlOptions": {
-        "authProtocol": "default",
-        "enableSsl": "Disabled"
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "connection",
-      "database": "parkinglot",
-      "username": "root"
-    },
-    {
-      "mysqlOptions": {
-        "authProtocol": "default",
-        "enableSsl": "Disabled"
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "connect database",
       "database": "parkinglot",
       "username": "root"
     }
