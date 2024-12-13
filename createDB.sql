@@ -73,7 +73,6 @@ CREATE TABLE Employees (
     PhoneNumber VARCHAR(15),
     Salary DECIMAL(10, 2),
     JobTitle VARCHAR(50),
-    AreaInCharge VARCHAR(50),
     BirthDate DATE,
     ShiftID INT,
     FOREIGN KEY (ShiftID) REFERENCES Shifts(ShiftID)
