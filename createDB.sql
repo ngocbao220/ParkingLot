@@ -11,7 +11,8 @@ USE ParkingLot;
 -- Lưu thông tin khách hàng
 CREATE TABLE Customers (
     CustomerID INT AUTO_INCREMENT PRIMARY KEY, -- ID khách hàng (tự tăng, khóa chính)
-    FullName VARCHAR(50),                      -- Họ và tên khách hàng
+    FirstName VARCHAR(50),                      -- Họ và tên khách hàng
+    LastName VARCHAR(50),                      -- Họ và tên khách hàng
     PhoneNumber VARCHAR(20),                   -- Số điện thoại của khách hàng
     Address VARCHAR(50)                        -- Địa chỉ khách hàng
 );
@@ -83,7 +84,8 @@ CREATE TABLE ParkingAssignment (
 -- Lưu thông tin nhân viên làm việc tại bãi đỗ xe
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,                 -- Mã nhân viên (khóa chính)
-    EmployeeName VARCHAR(100),                  -- Tên nhân viên
+    FirstName VARCHAR(100),                  -- Tên nhân viên
+    LastName VARCHAR(100),                  -- Tên nhân viên
     PhoneNumber VARCHAR(15),                    -- Số điện thoại liên lạc của nhân viên
     Salary DECIMAL(10, 2),                      -- Mức lương của nhân viên
     JobTitle VARCHAR(50),                       -- Chức vụ (ví dụ: Bảo vệ, Quản lý)
