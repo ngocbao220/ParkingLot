@@ -1,69 +1,72 @@
-DROP DATABASE parkinglot;
-
+DROP DATABASE IF EXISTS ParkingLot;
 CREATE DATABASE ParkingLot;
 USE ParkingLot;
 
-CREATE TABLE customers (
-    customerID INT AUTO_INCREMENT PRIMARY KEY,
-    fullName VARCHAR(50),
-    phoneNumber VARCHAR(20),
-    address VARCHAR(50)
+-- Table: Customers (Khách hàng)
+CREATE TABLE Customers (
+    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    FullName VARCHAR(50),
+    PhoneNumber VARCHAR(20),
+    Address VARCHAR(50)
 );
 
-
-CREATE TABLE vehicles (
-    registrationNumber varchar(15) PRIMARY KEY,
-    customerID int,
-    make varchar(50),
-    model varchar(50),
-    year int,
-    color varchar(20),
-    Foreign Key (customerID) REFERENCES customers(customerID)
+-- Table: Vehicles (Phương tiện)
+CREATE TABLE Vehicles (
+    LicensePlate VARCHAR(15) PRIMARY KEY,
+    OwnerID INT,
+    Type VARCHAR(50),
+    Brand VARCHAR(50),
+    Color VARCHAR(20),
+    FOREIGN KEY (OwnerID) REFERENCES Customers(CustomerID)
 );
 
--- Tạo bảng DichVu (Service)
-CREATE TABLE service (
+-- Table: Services (Dịch vụ)
+CREATE TABLE Services (
     ServiceID INT PRIMARY KEY,
     ServiceName VARCHAR(100),
     ServicePrice DECIMAL(10, 2),
     VehicleType VARCHAR(50)
 );
 
--- Tạo bảng SuDungDichVu (ServiceUsage)
+-- Table: ServiceUsage (Sử dụng dịch vụ)
 CREATE TABLE ServiceUsage (
+    ServiceUsageID INT AUTO_INCREMENT PRIMARY KEY,
     ServiceID INT,
-    registrationNumber VARCHAR(10),
+    LicensePlate VARCHAR(15),
     StartTime DATETIME,
     EndTime DATETIME,
-    PRIMARY KEY (ServiceID, registrationNumber),
-    FOREIGN KEY (ServiceID) REFERENCES service(ServiceID),
-    FOREIGN KEY (registrationNumber) REFERENCES vehicles(registrationNumber)
-);
-CREATE TABLE park (
-    Park_ID INT AUTO_INCREMENT PRIMARY KEY,
-    park_name VARCHAR(20),
-    status VARCHAR(20),
-    container INT
+    FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
+    FOREIGN KEY (LicensePlate) REFERENCES Vehicles(LicensePlate)
 );
 
-CREATE TABLE parkingspot (
+-- Table: Park (Bãi đỗ xe)
+CREATE TABLE Park (
+    ParkID INT AUTO_INCREMENT PRIMARY KEY,
+    ParkName VARCHAR(20),
+    Status VARCHAR(20),
+    Container INT
+);
+
+-- Table: ParkingSpot (Vị trí đỗ xe)
+CREATE TABLE ParkingSpot (
     ParkingSpotID INT AUTO_INCREMENT PRIMARY KEY,
     SpotType VARCHAR(50),
     Status VARCHAR(20),
-    Park_ID INT,
-    FOREIGN KEY (Park_ID) REFERENCES park(Park_ID)
+    ParkID INT,
+    FOREIGN KEY (ParkID) REFERENCES Park(ParkID)
 );
 
-CREATE TABLE Shift (
+-- Table: Shifts (Ca làm việc)
+CREATE TABLE Shifts (
     ShiftID INT PRIMARY KEY,
     ShiftName VARCHAR(50),
     StartTime DATETIME,
     EndTime DATETIME,
-	Park_ID int,
-    FOREIGN KEY (Park_ID) REFERENCES park(Park_ID)
+    ParkID INT,
+    FOREIGN KEY (ParkID) REFERENCES Park(ParkID)
 );
 
-
+-- Table: Employees (Nhân viên)
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,
     EmployeeName VARCHAR(100),
@@ -72,6 +75,6 @@ CREATE TABLE Employees (
     JobTitle VARCHAR(50),
     AreaInCharge VARCHAR(50),
     BirthDate DATE,
-    ShiftID INT,      
-    FOREIGN KEY (ShiftID) REFERENCES shift(ShiftID)
+    ShiftID INT,
+    FOREIGN KEY (ShiftID) REFERENCES Shifts(ShiftID)
 );
