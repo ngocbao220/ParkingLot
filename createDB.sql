@@ -79,6 +79,17 @@ CREATE TABLE ParkingAssignment (
     FOREIGN KEY (ParkingSpotID) REFERENCES ParkingSpot(ParkingSpotID) -- Liên kết với bảng ParkingSpot
 );
 
+-- ==================== Table: Employees (Nhân viên) ====================
+-- Lưu thông tin nhân viên làm việc tại bãi đỗ xe
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,                 -- Mã nhân viên (khóa chính)
+    EmployeeName VARCHAR(100),                  -- Tên nhân viên
+    PhoneNumber VARCHAR(15),                    -- Số điện thoại liên lạc của nhân viên
+    Salary DECIMAL(10, 2),                      -- Mức lương của nhân viên
+    JobTitle VARCHAR(50),                       -- Chức vụ (ví dụ: Bảo vệ, Quản lý)
+    BirthDate DATE                              -- Ngày sinh của nhân viên
+);
+
 -- ==================== Table: Shifts (Ca làm việc) ====================
 -- Lưu thông tin các ca làm việc trong bãi đỗ xe
 CREATE TABLE Shifts (
@@ -101,15 +112,4 @@ CREATE TABLE TasksInShift (
     EmployeeID INT,                              -- ID nhân viên thực hiện công việc (khóa ngoại từ Employees)
     FOREIGN KEY (ShiftID) REFERENCES Shifts(ShiftID), -- Liên kết với bảng Shifts
     FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) -- Liên kết với bảng Employees
-);
-
--- ==================== Table: Employees (Nhân viên) ====================
--- Lưu thông tin nhân viên làm việc tại bãi đỗ xe
-CREATE TABLE Employees (
-    EmployeeID INT PRIMARY KEY,                 -- Mã nhân viên (khóa chính)
-    EmployeeName VARCHAR(100),                  -- Tên nhân viên
-    PhoneNumber VARCHAR(15),                    -- Số điện thoại liên lạc của nhân viên
-    Salary DECIMAL(10, 2),                      -- Mức lương của nhân viên
-    JobTitle VARCHAR(50),                       -- Chức vụ (ví dụ: Bảo vệ, Quản lý)
-    BirthDate DATE                              -- Ngày sinh của nhân viên
 );
