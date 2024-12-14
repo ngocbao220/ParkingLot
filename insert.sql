@@ -151,7 +151,6 @@ INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) 
 INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30N-34567', 5, '2024-12-01 08:22:35', NULL);
 INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30R-86420', 7, '2024-12-02 9:03:11', '2024-12-02 14:09:18'); 
 INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30Q-13579', 8, '2024-12-01 21:03:09', '2024-12-02 05:54:30');
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29A-12345', 6, '2024-12-02 13:08:14', NULL);
 INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30B-67890', 11, '2024-12-02 08:46:12', NULL);
 INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31F-56789', 12, '2024-12-01 16:33:39', NULL);
 INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30H-78901', 17, '2024-12-02 11:13:06', NULL);
@@ -165,40 +164,39 @@ INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) 
 
 
 
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100012, 'Nguyễn Văn A', '0912345678', 10000000.00, 'Bảo vệ', '1985-05-15');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100013, 'Trần Thị B', '0912345679', 10000000.00, 'Bảo vệ', '1986-06-16');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100014, 'Lê Quang C', '0912345680', 10000000.00, 'Bảo vệ', '1987-07-17');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100015, 'Phạm Kim D', '0912345681', 10000000.00, 'Bảo vệ', '1988-08-18');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100016, 'Hoàng Thị E', '0912345682', 10000000.00, 'Bảo vệ', '1989-09-19');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100017, 'Nguyễn Bá G', '0912345683', 10000000.00, 'Bảo vệ', '1990-10-20');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100018, 'Nguyễn Văn H', '0912345684', 10000000.00, 'Bảo vệ', '1991-11-21');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100019, 'Trần Thị I', '0912345685', 10000000.00, 'Bảo vệ', '1992-12-22');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100020, 'Lê Quang J', '0912345686', 10000000.00, 'Bảo vệ', '1993-01-23');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100021, 'Phạm Kim K', '0912345687', 10000000.00, 'Bảo vệ', '1994-02-24');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100022, 'Hoàng Thị L', '0912345688', 10000000.00, 'Bảo vệ', '1995-03-25');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100023, 'Nguyễn Bá M', '0912345689', 10000000.00, 'Bảo vệ', '1996-04-26');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100024, 'Nguyễn Văn N', '0912345690', 10000000.00, 'Bảo vệ', '1997-05-27');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100025, 'Trần Thị O', '0912345691', 10000000.00, 'Bảo vệ', '1998-06-28');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100026, 'Lê Quang P', '0912345692', 10000000.00, 'Bảo vệ', '1999-07-29');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100231, 'Trần Thị Q', '0987654321', 8000000.00, 'Kiểm vé', '1990-07-20');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100232, 'Nguyễn Bá R', '0987654322', 8000000.00, 'Kiểm vé', '1991-08-21');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100233, 'Phạm Kim S', '0987654323', 8000000.00, 'Kiểm vé', '1992-09-22');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100234, 'Hoàng Thị T', '0987654324', 8000000.00, 'Kiểm vé', '1993-10-23');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100235, 'Nguyễn Văn U', '0987654325', 8000000.00, 'Kiểm vé', '1994-11-24');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100236, 'Trần Thị V', '0987654326', 8000000.00, 'Kiểm vé', '1995-12-25');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100237, 'Lê Quang W', '0987654327', 8000000.00, 'Kiểm vé', '1996-01-26');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100238, 'Phạm Kim X', '0987654328', 8000000.00, 'Kiểm vé', '1997-02-27');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100239, 'Hoàng Thị Y', '0987654329', 8000000.00, 'Kiểm vé', '1998-03-28');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100240, 'Nguyễn Bá Z', '0987654330', 8000000.00, 'Kiểm vé', '1999-04-29');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100241, 'Nguyễn Văn AA', '0987654331', 8000000.00, 'Kiểm vé', '2000-05-30');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100242, 'Trần Thị BB', '0987654332', 8000000.00, 'Kiểm vé', '2001-06-01');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100243, 'Lê Quang CC', '0987654333', 8000000.00, 'Kiểm vé', '2002-07-02');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100244, 'Phạm Kim DD', '0987654334', 8000000.00, 'Kiểm vé', '2003-08-03');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100245, 'Hoàng Thị EE', '0987654335', 8000000.00, 'Kiểm vé', '2004-09-04');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100789, 'Nguyễn Bá G', '0943546576', 12000000.00, 'Kỹ thuật', '1993-12-15');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100790, 'Trần Thị FF', '0943546577', 12000000.00, 'Kỹ thuật', '1994-01-16');
-INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100791, 'Lê Quang GG', '0943546578', 12000000.00, 'Kỹ thuật', '1995-02-17');
-
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100012, 'A', 'Nguyễn', '0912345678', 10000000.00, 'Bảo vệ', '1985-05-15');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100013, 'B', 'Trần', '0912345679', 10000000.00, 'Bảo vệ', '1986-06-16');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100014, 'C', 'Lê', '0912345680', 10000000.00, 'Bảo vệ', '1987-07-17');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100015, 'D', 'Phạm', '0912345681', 10000000.00, 'Bảo vệ', '1988-08-18');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100016, 'E', 'Hoàng', '0912345682', 10000000.00, 'Bảo vệ', '1989-09-19');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100017, 'G', 'Nguyễn', '0912345683', 10000000.00, 'Bảo vệ', '1990-10-20');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100018, 'H', 'Nguyễn', '0912345684', 10000000.00, 'Bảo vệ', '1991-11-21');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100019, 'I', 'Trần', '0912345685', 10000000.00, 'Bảo vệ', '1992-12-22');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100020, 'J', 'Lê', '0912345686', 10000000.00, 'Bảo vệ', '1993-01-23');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100021, 'K', 'Phạm', '0912345687', 10000000.00, 'Bảo vệ', '1994-02-24');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100022, 'L', 'Hoàng', '0912345688', 10000000.00, 'Bảo vệ', '1995-03-25');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100023, 'M', 'Nguyễn', '0912345689', 10000000.00, 'Bảo vệ', '1996-04-26');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100024, 'N', 'Nguyễn', '0912345690', 10000000.00, 'Bảo vệ', '1997-05-27');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100025, 'O', 'Trần', '0912345691', 10000000.00, 'Bảo vệ', '1998-06-28');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100026, 'P', 'Lê', '0912345692', 10000000.00, 'Bảo vệ', '1999-07-29');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100231, 'Q', 'Trần', '0987654321', 8000000.00, 'Kiểm vé', '1990-07-20');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100232, 'R', 'Nguyễn', '0987654322', 8000000.00, 'Kiểm vé', '1991-08-21');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100233, 'S', 'Phạm', '0987654323', 8000000.00, 'Kiểm vé', '1992-09-22');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100234, 'T', 'Hoàng', '0987654324', 8000000.00, 'Kiểm vé', '1993-10-23');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100235, 'U', 'Nguyễn', '0987654325', 8000000.00, 'Kiểm vé', '1994-11-24');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100236, 'V', 'Trần', '0987654326', 8000000.00, 'Kiểm vé', '1995-12-25');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100237, 'W', 'Lê', '0987654327', 8000000.00, 'Kiểm vé', '1996-01-26');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100238, 'X', 'Phạm', '0987654328', 8000000.00, 'Kiểm vé', '1997-02-27');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100239, 'Y', 'Hoàng', '0987654329', 8000000.00, 'Kiểm vé', '1998-03-28');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100240, 'Z', 'Nguyễn', '0987654330', 8000000.00, 'Kiểm vé', '1999-04-29');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100241, 'AA', 'Nguyễn', '0987654331', 8000000.00, 'Kiểm vé', '2000-05-30');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100242, 'BB', 'Trần', '0987654332', 8000000.00, 'Kiểm vé', '2001-06-01');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100243, 'CC', 'Lê', '0987654333', 8000000.00, 'Kiểm vé', '2002-07-02');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100244, 'DD', 'Phạm', '0987654334', 8000000.00, 'Kiểm vé', '2003-08-03');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100245, 'EE', 'Hoàng', '0987654335', 8000000.00, 'Kiểm vé', '2004-09-04');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100789, 'G', 'Nguyễn Bá', '0943546576', 12000000.00, 'Kỹ thuật', '1993-12-15');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100790, 'FF', 'Trần', '0943546577', 12000000.00, 'Kỹ thuật', '1994-01-16');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100791, 'GG', 'Lê', '0943546578', 12000000.00, 'Kỹ thuật', '1995-02-17');
 
 
 INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (1, 'Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00', 1);
