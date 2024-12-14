@@ -1,20 +1,49 @@
 -- SQLBook: Code
 USE ParkingLot;
 
-INSERT INTO Customers (FullName, PhoneNumber, Address) VALUES ('Nguyễn Thế Khôi', '0901234567', 'Đống Đa, Hà Nội');
-INSERT INTO Customers (FullName, PhoneNumber, Address) VALUES ('Phan Trần Mạnh Cường', '0987654321', 'Cầu Giấy, Hà Nội');
-INSERT INTO Customers (FullName, PhoneNumber, Address) VALUES ('Nguyễn Vũ Quang Anh', '0912345678', 'Cầu Giấy, Hà Nội');
-INSERT INTO Customers (FullName, PhoneNumber, Address) VALUES ('Trịnh Tuấn Ngọc Bảo', '0923456789', 'Bắc Từ Liêm, Hà Nội');
-INSERT INTO Customers (FullName, PhoneNumber, Address) VALUES ('Trịnh Trần Phương Tuấn', '0934567890', 'Nam Từ Liêm, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Khôi', 'Nguyễn', '0901234567', 'Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Cường', 'Phan', '0987654321', 'Phường Cầu Giấy, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Anh', 'Nguyễn', '0912345678', 'Phường Mai Dịch, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Bảo', 'Trịnh', '0923456789', 'Phường Yên Hòa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Tuấn', 'Trịnh', '0934567890', 'Phường Trung Hòa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Lan', 'Nguyễn', '0945678901', 'Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Hải', 'Trần', '0956789012', 'Phường Nghĩa Tân, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Minh', 'Lê', '0967890123', 'Phường Quan Hoa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Thảo', 'Vũ', '0978901234', 'Phường Mai Dịch, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Quân', 'Nguyễn', '0989012345', 'Phường Trần Duy Hưng, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Ngọc', 'Trần', '0912345679', 'Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Hương', 'Lê', '0923456780', 'Phường Mai Dịch, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Duy', 'Phạm', '0934567891', 'Phường Cầu Giấy, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Bảo', 'Vũ', '0945678902', 'Phường Nghĩa Tân, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Trang', 'Lý', '0956789013', 'Phường Yên Hòa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Tuấn', 'Nguyễn', '0967890124', 'Phường Quan Hoa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Mai', 'Trần', '0978901235', 'Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội');
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address) VALUES ('Khoa', 'Nguyễn', '0989012346', 'Phường Trung Hòa, Quận Cầu Giấy, Hà Nội');
 
 
-INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('98A-12345', 1, 'Xe máy', 'Honda', 'Trắng');
-INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30B-67890', 2, 'Ô tô dưới 9 chỗ ngồi', 'Honda', 'Xanh');
-INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29C-54321', 3, 'Xe máy', 'Yamaha', 'Đen');
-INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30D-09876', 4, 'Ô tô dưới 9 chỗ ngồi', 'Mec', 'Trắng');
-INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('49E-45678', 5, 'Ô tô từ 24-40 chỗ ngồi', 'Ford', 'Bạc');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29A-12345', 1, 'Xe máy', 'Honda', 'Đỏ');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30B-67890', 2, 'Xe máy', 'Yamaha', 'Xanh');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('31C-23456', 3, 'Xe máy', 'Suzuki', 'Trắng');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29D-34567', 4, 'Ô tô dưới 9 chỗ ngồi', 'Toyota', 'Đen');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30E-45678', 5, 'Ô tô dưới 9 chỗ ngồi', 'Honda', 'Bạc');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('31F-56789', 6, 'Ô tô từ 10-24 chỗ ngồi', 'Ford', 'Xanh dương');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29G-67890', 7, 'Ô tô từ 10-24 chỗ ngồi', 'Mercedes', 'Bạc');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30H-78901', 8, 'Ô tô từ 24-40 chỗ ngồi', 'Volkswagen', 'Vàng');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('31I-89012', 9, 'Ô tô từ 24-40 chỗ ngồi', 'Hyundai', 'Trắng');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29J-90123', 10, 'Ô tô trên 40 chỗ ngồi', 'Scania', 'Đỏ');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30K-01234', 11, 'Xe tải dưới 2 tấn', 'Isuzu', 'Xanh lá');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('31L-12345', 12, 'Xe tải dưới 2 tấn', 'Mitsubishi', 'Đen');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29M-23456', 13, 'Xe tải 2-7 tấn', 'Hino', 'Trắng');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30N-34567', 14, 'Xe tải 2-7 tấn', 'Fuso', 'Bạc');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('31O-45678', 15, 'Xe tải 7-13 tấn', 'Volvo', 'Xám');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29P-56789', 16, 'Xe tải 7-13 tấn', 'Man', 'Cam');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30Q-67890', 17, 'Xe tải trên 13 tấn', 'Kenworth', 'Vàng');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('31R-78901', 18, 'Xe tải trên 13 tấn', 'DAF', 'Đỏ');
 INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29H-34567', NULL, 'Xe máy', 'Honda', 'Trắng');
 INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('29P-24680', NULL, 'Xe máy', 'Honda', 'Đen');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30Q-13579', NULL, 'Ô tô dưới 9 chỗ ngồi', 'Toyota', 'Xanh');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30R-86420', NULL, 'Ô tô dưới 9 chỗ ngồi', 'Hyundai', 'Đỏ');
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color) VALUES ('30S-97531', NULL, 'Xe tải dưới 2 tấn', 'Isuzu', 'Bạc');
 
 
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt ngày', 3000.00, 'Xe máy');
@@ -35,7 +64,7 @@ INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi the
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo tháng', 3500000.00, 'Ô tô từ 24-40 chỗ ngồi');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt ngày', 100000.00, 'Ô tô trên 40 chỗ ngồi');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt đêm', 150000.00, 'Ô tô trên 40 chỗ ngồi');
-INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo cả ngày và đêm', 180000.00, 'Ô tô trên 40 chỗ ngồi');
+INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo cả ngày và đêm', 200000.00, 'Ô tô trên 40 chỗ ngồi');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo tháng', 5000000.00, 'Ô tô trên 40 chỗ ngồi');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt ngày', 30000.00, 'Xe tải dưới 2 tấn');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt đêm', 50000.00, 'Xe tải dưới 2 tấn');
@@ -51,48 +80,89 @@ INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi the
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo tháng', 3500000.00, 'Xe tải 7-13 tấn');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt ngày', 100000.00, 'Xe tải trên 13 tấn');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo lượt đêm', 150000.00, 'Xe tải trên 13 tấn');
-INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo cả ngày và đêm', 180000.00, 'Xe tải trên 13 tấn');
+INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo cả ngày và đêm', 200000.00, 'Xe tải trên 13 tấn');
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo tháng', 5000000.00, 'Xe tải trên 13 tấn');
 
 
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '98A-12345', '2024-12-01 08:00:00', '2025-01-01 08:00:00');
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (8, '30B-67890', '2024-11-30 20:00:00', '2024-12-30 20:00:00');
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '29C-54321', '2024-11-30 19:00:00', '2024-12-30 19:00:00');
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (7, '30D-09876', '2024-12-01 07:30:00', '2024-12-02 07:30:00');
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (16, '49E-45678', '2024-11-23 07:30:00', '2024-12-23 07:30:00');
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (1, '29P-24680', '2024-12-01 09:00:00', '2024-12-01 18:00:00');
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (1, '29H-34567', '2024-12-01 10:00:00', '2024-12-01 18:00:00');
-
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (1, '29H-34567', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (1, '29P-24680', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (5, '30R-86420', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (6, '30Q-13579', CAST('2024-12-01 18:00:00' AS DateTime), CAST('2024-12-02 06:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (22, '30S-97531', CAST('2024-12-01 18:00:00' AS DateTime), CAST('2024-12-02 06:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '29A-12345', CAST('2024-12-01 08:00:00' AS DateTime), CAST('2025-01-01 08:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '30B-67890', CAST('2024-11-30 20:00:00' AS DateTime), CAST('2024-12-30 20:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '31C-23456', CAST('2024-11-30 19:00:00' AS DateTime), CAST('2024-12-30 19:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (7, '29D-34567', CAST('2024-12-01 07:30:00' AS DateTime), CAST('2024-12-02 07:30:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (8, '30E-45678', CAST('2024-11-23 07:30:00' AS DateTime), CAST('2024-12-23 07:30:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (12, '31F-56789', CAST('2024-12-01 09:00:00' AS DateTime), CAST('2025-01-01 09:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (12, '29G-67890', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2025-01-01 10:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (15, '30H-78901', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2024-12-02 10:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (16, '31I-89012', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2025-01-01 10:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (20, '29J-90123', CAST('2024-12-01 09:00:00' AS DateTime), CAST('2025-01-01 09:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (24, '30K-01234', CAST('2024-11-25 10:00:00' AS DateTime), CAST('2024-12-25 10:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (24, '31L-12345', CAST('2024-11-27 17:00:00' AS DateTime), CAST('2024-12-27 17:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (28, '29M-23456', CAST('2024-11-26 14:00:00' AS DateTime), CAST('2024-12-26 14:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (28, '30N-34567', CAST('2024-11-24 13:00:00' AS DateTime), CAST('2024-12-24 13:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (32, '31O-45678', CAST('2024-11-29 10:00:00' AS DateTime), CAST('2024-12-29 10:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (32, '29P-56789', CAST('2024-12-01 08:00:00' AS DateTime), CAST('2025-01-01 08:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (36, '30Q-67890', CAST('2024-11-26 20:00:00' AS DateTime), CAST('2024-12-26 20:00:00' AS DateTime));
+INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (36, '31R-78901', CAST('2024-12-02 09:00:00' AS DateTime), CAST('2025-01-02 09:00:00' AS DateTime));
 
 
 INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe A', 'Hoạt động', 100);
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe B', 'Đang sửa chữa', 50);
+INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe B', 'Hoạt động', 50);
 INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe C', 'Hoạt động', 130);
 INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe D', 'Hoạt động', 200);
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe E', 'Hoạt động', 80);
+INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe E', 'Đang sửa chữa', 80);
 
 
 INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Trống', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 3);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải dưới 2 tấn', 'Đã có xe', 1);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 1);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 2);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải dưới 2 tấn', 'Đã có xe', 2);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải dưới 2 tấn', 'Trống', 2);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 3);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Đã có xe', 3);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Trống', 3);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 3);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 3);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 4);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 7-13 tấn', 'Trống', 4);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 24-40 chỗ ngồi', 'Đã có xe', 4);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 24-40 chỗ ngồi', 'Trống', 4);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 7-13 tấn', 'Đã có xe', 4);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 7-13 tấn', 'Đã có xe', 4);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 5);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 5);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 5);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 5);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải trên 13 tấn', 'Trống', 5);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải trên 13 tấn', 'Trống', 5);
 
 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29H-34567', 1, '2024-12-01 10:00:00', NULL); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29P-24680', 2, '2024-12-01 09:00:00', NULL); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30D-09876', 4, '2024-12-01 07:30:00', NULL); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29C-54321', 3, '2024-11-30 19:00:00', '2024-12-01 06:00:00'); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30B-67890', 8, '2024-11-30 20:00:00', '2024-12-01 06:00:00');
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('98A-12345', 3, '2024-12-01 08:00:00', NULL);
+
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29H-34567', 1, '2024-12-02 07:34:26', NULL); 
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29P-24680', 2, '2024-12-02 07:54:28', NULL); 
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29A-12345', 3, '2024-12-02 08:26:02', NULL); 
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30S-97531', 4, '2024-12-01 22:03:18', '2024-12-02 04:56:36');
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30N-34567', 5, '2024-12-01 08:22:35', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30R-86420', 7, '2024-12-02 9:03:11', '2024-12-02 14:09:18'); 
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30Q-13579', 8, '2024-12-01 21:03:09', '2024-12-02 05:54:30');
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29A-12345', 6, '2024-12-02 13:08:14', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30B-67890', 11, '2024-12-02 08:46:12', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31F-56789', 12, '2024-12-01 16:33:39', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30H-78901', 17, '2024-12-02 11:13:06', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29M-23456', 14, '2024-12-02 03:08:24', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30N-34567', 15, '2024-12-02 03:10:36', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30K-01234', 9, '2024-12-02 03:08:24', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31O-45678', 19, '2024-11-30 14:28:42', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29P-56789', 20, '2024-12-02 08:34:28', NULL);
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31C-23456', 16, '2024-12-02 03:08:24', '2024-12-02 13:48:54');
+INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29D-34567', 8, '2024-12-02 11:03:05', '2024-12-02 15:09:25');
+
 
 
 INSERT INTO Employees (EmployeeID, EmployeeName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100012, 'Nguyễn Văn A', '0912345678', 10000000.00, 'Bảo vệ', '1985-05-15');
