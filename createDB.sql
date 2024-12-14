@@ -24,17 +24,17 @@ CREATE TABLE Customers (
 -- Lưu thông tin phương tiện của khách hàng
 CREATE TABLE Vehicles (
     LicensePlate VARCHAR(15) PRIMARY KEY,      -- Biển số xe (khóa chính)
-    OwnerID INT,                               -- ID của chủ sở hữu xe (khóa ngoại từ Customers)
+    CustomerID INT,                               -- ID của chủ sở hữu xe (khóa ngoại từ Customers)
     Type VARCHAR(50),                          -- Loại phương tiện (ví dụ: Xe máy, Ô tô)
     Brand VARCHAR(50),                         -- Hãng sản xuất xe (ví dụ: Honda, Toyota)
     Color VARCHAR(20),                         -- Màu sắc của xe
-    FOREIGN KEY (OwnerID) REFERENCES Customers(CustomerID) -- Liên kết với bảng Customers
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) -- Liên kết với bảng Customers
 );
 
 -- ==================== Table: Services (Dịch vụ) ====================
 -- Lưu thông tin về các dịch vụ được cung cấp
 CREATE TABLE Services (
-    ServiceID INT PRIMARY KEY,                 -- Mã dịch vụ (khóa chính)
+    ServiceID INT AUTO_INCREMENT PRIMARY KEY,                 -- Mã dịch vụ (khóa chính)
     ServiceName VARCHAR(100),                  -- Tên dịch vụ (ví dụ: Rửa xe, Bảo dưỡng)
     ServicePrice DECIMAL(10, 2),               -- Giá dịch vụ
     VehicleType VARCHAR(50)                    -- Loại phương tiện áp dụng (ví dụ: Xe máy, Ô tô)
@@ -111,8 +111,6 @@ CREATE TABLE TasksInShift (
     TaskID INT AUTO_INCREMENT PRIMARY KEY,       -- Mã công việc (tự tăng, khóa chính)
     ShiftID INT,                                 -- Mã ca làm việc (khóa ngoại từ Shifts)
     TaskDescription VARCHAR(255),               -- Mô tả chi tiết công việc
-    StartTime DATETIME,                          -- Thời gian bắt đầu công việc
-    EndTime DATETIME,                            -- Thời gian kết thúc công việc
     EmployeeID INT,                              -- ID nhân viên thực hiện công việc (khóa ngoại từ Employees)
     FOREIGN KEY (ShiftID) REFERENCES Shifts(ShiftID), -- Liên kết với bảng Shifts
     FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) -- Liên kết với bảng Employees
