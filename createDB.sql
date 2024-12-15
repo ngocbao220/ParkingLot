@@ -1,3 +1,4 @@
+-- SQLBook: Code
 -- Xóa cơ sở dữ liệu ParkingLot nếu đã tồn tại
 DROP DATABASE IF EXISTS ParkingLot;
 
@@ -20,7 +21,7 @@ CREATE TABLE Customers (
 -- ==================== Table: Vehicles (Phương tiện) ====================
 CREATE TABLE Vehicles (
     LicensePlate VARCHAR(15) PRIMARY KEY,
-    CustomerID INT NOT NULL,
+    CustomerID INT,
     Type VARCHAR(50),
     Brand VARCHAR(50),
     Color VARCHAR(20),
@@ -39,7 +40,7 @@ CREATE TABLE Services (
 CREATE TABLE ServiceRegistration (
     ServiceRegistrationID INT AUTO_INCREMENT PRIMARY KEY,
     ServiceID INT NOT NULL,
-    CustomerID INT NOT NULL,
+    CustomerID INT,
     LicensePlate VARCHAR(15) NOT NULL,
     StartTime DATETIME,
     EndTime DATETIME,   
@@ -96,8 +97,8 @@ CREATE TABLE Employees (
 CREATE TABLE Shifts (
     ShiftID INT AUTO_INCREMENT PRIMARY KEY,
     ShiftName VARCHAR(50),
-    StartTime DATETIME,
-    EndTime DATETIME
+    StartTime TIME,
+    EndTime TIME
 );
 
 -- ==================== Table: ShiftsDetails (Chi tiết ca làm việc) ====================

@@ -109,38 +109,38 @@ INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime,
 INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (36, 18, '31R-78901', CAST('2024-12-02 09:00:00' AS DateTime), CAST('2025-01-02 09:00:00' AS DateTime));
 
 
-INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe A', 'Hết chỗ', 100, 'Phường Nghĩa Tân, Quận Cầu Giấy, Hà Nội');
+INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe A', 'Còn chỗ', 100, 'Phường Nghĩa Tân, Quận Cầu Giấy, Hà Nội');
 INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe B', 'Còn chỗ', 50, 'Phường Trung Hòa, Quận Cầu Giấy, Hà Nội');
 INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe C', 'Còn chỗ', 130, 'Phường Yên Hòa, Quận Cầu Giấy, Hà Nội');
 INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe D', 'Còn chỗ', 200, 'Phường Mai Dịch, Quận Cầu Giấy, Hà Nội');
 INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe E', 'Còn chỗ', 80, 'Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội');
 
 
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải dưới 2 tấn', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 1);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 2);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải dưới 2 tấn', 'Đã có xe', 2);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải dưới 2 tấn', 'Trống', 2);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Đã có xe', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Trống', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 3);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 4);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 24-40 chỗ ngồi', 'Đã có xe', 4);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô từ 24-40 chỗ ngồi', 'Trống', 4);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 7-13 tấn', 'Đã có xe', 4);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải 7-13 tấn', 'Đã có xe', 4);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Trống', 5);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 5);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 5);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải trên 13 tấn', 'Trống', 5);
-INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải trên 13 tấn', 'Trống', 5);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Đã có xe', 1, '29H-34567', '2024-12-02 07:34:26', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Đã có xe', 1, '29P-24680', '2024-12-02 07:54:28', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Đã có xe', 1, '29A-12345', '2024-12-02 08:26:02', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải dưới 2 tấn', 'Trống', 1, '30S-97531', '2024-12-01 22:03:18', '2024-12-02 04:56:36');
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 1, '30N-34567', '2024-12-01 08:22:35', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Trống', 2, '30R-86420', '2024-12-02 09:03:11', '2024-12-02 14:09:18');
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2, '30Q-13579', '2024-12-01 21:03:09', '2024-12-02 05:54:30');
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2, '29D-34567', '2024-12-02 11:03:05', '2024-12-02 15:09:25');
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải dưới 2 tấn', 'Đã có xe', 2, '30K-01234', '2024-12-02 03:08:24', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải dưới 2 tấn', 'Trống', 2, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Trống', 3, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Đã có xe', 3,'31F-56789', '2024-12-01 16:33:39', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô từ 10-24 chỗ ngồi', 'Trống', 3, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 3, '29M-23456', '2024-12-02 03:08:24', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải 2-7 tấn', 'Trống', 3, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Đã có xe', 4, '30B-67890', '2024-12-02 08:46:12', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô từ 24-40 chỗ ngồi', 'Đã có xe', 4, '30H-78901', '2024-12-02 11:13:06', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô từ 24-40 chỗ ngồi', 'Trống', 4, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải 7-13 tấn', 'Đã có xe', 4, '31O-45678', '2024-11-30 14:28:42', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải 7-13 tấn', 'Đã có xe', 4, '29P-56789', '2024-12-02 08:34:28', NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Trống', 5, '31C-23456', '2024-12-02 03:08:24', '2024-12-02 13:48:54');
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 5, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô trên 40 chỗ ngồi', 'Trống', 5, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải trên 13 tấn', 'Trống', 5, NULL, NULL, NULL);
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải trên 13 tấn', 'Trống', 5, NULL, NULL, NULL);
 
 
 
@@ -163,72 +163,301 @@ INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('
 
 
 
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100012, 'A', 'Nguyễn', '0912345678', 10000000.00, 'Bảo vệ', '1985-05-15');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100013, 'B', 'Trần', '0912345679', 10000000.00, 'Bảo vệ', '1986-06-16');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100014, 'C', 'Lê', '0912345680', 10000000.00, 'Bảo vệ', '1987-07-17');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100015, 'D', 'Phạm', '0912345681', 10000000.00, 'Bảo vệ', '1988-08-18');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100016, 'E', 'Hoàng', '0912345682', 10000000.00, 'Bảo vệ', '1989-09-19');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100017, 'G', 'Nguyễn', '0912345683', 10000000.00, 'Bảo vệ', '1990-10-20');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100018, 'H', 'Nguyễn', '0912345684', 10000000.00, 'Bảo vệ', '1991-11-21');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100019, 'I', 'Trần', '0912345685', 10000000.00, 'Bảo vệ', '1992-12-22');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100020, 'J', 'Lê', '0912345686', 10000000.00, 'Bảo vệ', '1993-01-23');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100021, 'K', 'Phạm', '0912345687', 10000000.00, 'Bảo vệ', '1994-02-24');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100022, 'L', 'Hoàng', '0912345688', 10000000.00, 'Bảo vệ', '1995-03-25');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100023, 'M', 'Nguyễn', '0912345689', 10000000.00, 'Bảo vệ', '1996-04-26');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100024, 'N', 'Nguyễn', '0912345690', 10000000.00, 'Bảo vệ', '1997-05-27');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100025, 'O', 'Trần', '0912345691', 10000000.00, 'Bảo vệ', '1998-06-28');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100026, 'P', 'Lê', '0912345692', 10000000.00, 'Bảo vệ', '1999-07-29');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100231, 'Q', 'Trần', '0987654321', 8000000.00, 'Kiểm vé', '1990-07-20');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100232, 'R', 'Nguyễn', '0987654322', 8000000.00, 'Kiểm vé', '1991-08-21');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100233, 'S', 'Phạm', '0987654323', 8000000.00, 'Kiểm vé', '1992-09-22');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100234, 'T', 'Hoàng', '0987654324', 8000000.00, 'Kiểm vé', '1993-10-23');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100235, 'U', 'Nguyễn', '0987654325', 8000000.00, 'Kiểm vé', '1994-11-24');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100236, 'V', 'Trần', '0987654326', 8000000.00, 'Kiểm vé', '1995-12-25');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100237, 'W', 'Lê', '0987654327', 8000000.00, 'Kiểm vé', '1996-01-26');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100238, 'X', 'Phạm', '0987654328', 8000000.00, 'Kiểm vé', '1997-02-27');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100239, 'Y', 'Hoàng', '0987654329', 8000000.00, 'Kiểm vé', '1998-03-28');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100240, 'Z', 'Nguyễn', '0987654330', 8000000.00, 'Kiểm vé', '1999-04-29');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100241, 'AA', 'Nguyễn', '0987654331', 8000000.00, 'Kiểm vé', '2000-05-30');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100242, 'BB', 'Trần', '0987654332', 8000000.00, 'Kiểm vé', '2001-06-01');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100243, 'CC', 'Lê', '0987654333', 8000000.00, 'Kiểm vé', '2002-07-02');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100244, 'DD', 'Phạm', '0987654334', 8000000.00, 'Kiểm vé', '2003-08-03');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100245, 'EE', 'Hoàng', '0987654335', 8000000.00, 'Kiểm vé', '2004-09-04');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100789, 'G', 'Nguyễn Bá', '0943546576', 12000000.00, 'Kỹ thuật', '1993-12-15');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100790, 'FF', 'Trần', '0943546577', 12000000.00, 'Kỹ thuật', '1994-01-16');
-INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100791, 'GG', 'Lê', '0943546578', 12000000.00, 'Kỹ thuật', '1995-02-17');
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) 
+VALUES
+(100001, 'A', 'Nguyễn', '0911000001', 7000000.00, 'Nhân viên trông giữ xe', '1985-01-15'),
+(100002, 'B', 'Trần', '0911000002', 7000000.00, 'Nhân viên trông giữ xe', '1986-02-16'),
+(100003, 'C', 'Lê', '0911000003', 7000000.00, 'Nhân viên trông giữ xe', '1987-03-17'),
+(100004, 'D', 'Phạm', '0911000004', 7000000.00, 'Nhân viên trông giữ xe', '1988-04-18'),
+(100005, 'E', 'Hoàng', '0911000005', 7000000.00, 'Nhân viên trông giữ xe', '1989-05-19'),
+(100006, 'F', 'Nguyễn', '0911000006', 7000000.00, 'Nhân viên trông giữ xe', '1990-06-20'),
+(100007, 'G', 'Trần', '0911000007', 7000000.00, 'Nhân viên trông giữ xe', '1991-07-21'),
+(100008, 'H', 'Lê', '0911000008', 7000000.00, 'Nhân viên trông giữ xe', '1992-08-22'),
+(100009, 'I', 'Phạm', '0911000009', 7000000.00, 'Nhân viên trông giữ xe', '1993-09-23'),
+(100010, 'J', 'Hoàng', '0911000010', 7000000.00, 'Nhân viên trông giữ xe', '1994-10-24'),
+(100011, 'K', 'Nguyễn', '0911000011', 7000000.00, 'Nhân viên trông giữ xe', '1995-11-25'),
+(100012, 'L', 'Trần', '0911000012', 7000000.00, 'Nhân viên trông giữ xe', '1996-12-26'),
+(100013, 'M', 'Lê', '0911000013', 7000000.00, 'Nhân viên trông giữ xe', '1997-01-27'),
+(100014, 'N', 'Phạm', '0911000014', 7000000.00, 'Nhân viên trông giữ xe', '1998-02-28'),
+(100015, 'O', 'Hoàng', '0911000015', 7000000.00, 'Nhân viên trông giữ xe', '1999-03-01');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) 
+VALUES
+(100016, 'P', 'Nguyễn', '0912000001', 8000000.00, 'Nhân viên thu ngân', '1985-01-15'),
+(100017, 'Q', 'Trần', '0912000002', 8000000.00, 'Nhân viên thu ngân', '1986-02-16'),
+(100018, 'R', 'Lê', '0912000003', 8000000.00, 'Nhân viên thu ngân', '1987-03-17'),
+(100019, 'S', 'Phạm', '0912000004', 8000000.00, 'Nhân viên thu ngân', '1988-04-18'),
+(100020, 'T', 'Hoàng', '0912000005', 8000000.00, 'Nhân viên thu ngân', '1989-05-19'),
+(100021, 'U', 'Nguyễn', '0912000006', 8000000.00, 'Nhân viên thu ngân', '1990-06-20'),
+(100022, 'V', 'Trần', '0912000007', 8000000.00, 'Nhân viên thu ngân', '1991-07-21'),
+(100023, 'W', 'Lê', '0912000008', 8000000.00, 'Nhân viên thu ngân', '1992-08-22'),
+(100024, 'X', 'Phạm', '0912000009', 8000000.00, 'Nhân viên thu ngân', '1993-09-23'),
+(100025, 'Y', 'Hoàng', '0912000010', 8000000.00, 'Nhân viên thu ngân', '1994-10-24'),
+(100026, 'Z', 'Nguyễn', '0912000011', 8000000.00, 'Nhân viên thu ngân', '1995-11-25'),
+(100027, 'AA', 'Nguyễn', '0912000012', 8000000.00, 'Nhân viên thu ngân', '1996-12-26'),
+(100028, 'BB', 'Trần', '0912000013', 8000000.00, 'Nhân viên thu ngân', '1997-01-27'),
+(100029, 'CC', 'Lê', '0912000014', 8000000.00, 'Nhân viên thu ngân', '1998-02-28'),
+(100030, 'DD', 'Phạm', '0912000015', 8000000.00, 'Nhân viên thu ngân', '1999-03-01');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) 
+VALUES
+(100031, 'EE', 'Hoàng', '0913000001', 9000000.00, 'Giám sát bãi đỗ xe', '1985-01-15'),
+(100032, 'FF', 'Nguyễn', '0913000002', 9000000.00, 'Giám sát bãi đỗ xe', '1986-02-16'),
+(100033, 'GG', 'Trần', '0913000003', 9000000.00, 'Giám sát bãi đỗ xe', '1987-03-17'),
+(100034, 'HH', 'Lê', '0913000004', 9000000.00, 'Giám sát bãi đỗ xe', '1988-04-18'),
+(100035, 'II', 'Phạm', '0913000005', 9000000.00, 'Giám sát bãi đỗ xe', '1989-05-19'),
+(100036, 'JJ', 'Hoàng', '0913000006', 9000000.00, 'Giám sát bãi đỗ xe', '1990-06-20'),
+(100037, 'KK', 'Nguyễn', '0913000007', 9000000.00, 'Giám sát bãi đỗ xe', '1991-07-21'),
+(100038, 'LL', 'Trần', '0913000008', 9000000.00, 'Giám sát bãi đỗ xe', '1992-08-22'),
+(100039, 'MM', 'Lê', '0913000009', 9000000.00, 'Giám sát bãi đỗ xe', '1993-09-23'),
+(100040, 'NN', 'Phạm', '0913000010', 9000000.00, 'Giám sát bãi đỗ xe', '1994-10-24'),
+(100041, 'OO', 'Hoàng', '0913000011', 9000000.00, 'Giám sát bãi đỗ xe', '1995-11-25'),
+(100042, 'PP', 'Nguyễn', '0913000012', 9000000.00, 'Giám sát bãi đỗ xe', '1996-12-26'),
+(100043, 'QQ', 'Trần', '0913000013', 9000000.00, 'Giám sát bãi đỗ xe', '1997-01-27'),
+(100044, 'RR', 'Lê', '0913000014', 9000000.00, 'Giám sát bãi đỗ xe', '1998-02-28'),
+(100045, 'SS', 'Phạm', '0913000015', 9000000.00, 'Giám sát bãi đỗ xe', '1999-03-01');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) 
+VALUES
+(100046, 'TT', 'Nguyễn', '0914000001', 8500000.00, 'Nhân viên lái xe vale', '1985-01-15'),
+(100047, 'UU', 'Trần', '0914000002', 8500000.00, 'Nhân viên lái xe vale', '1986-02-16'),
+(100048, 'VV', 'Lê', '0914000003', 8500000.00, 'Nhân viên lái xe vale', '1987-03-17'),
+(100049, 'WW', 'Phạm', '0914000004', 8500000.00, 'Nhân viên lái xe vale', '1988-04-18'),
+(100050, 'XX', 'Hoàng', '0914000005', 8500000.00, 'Nhân viên lái xe vale', '1989-05-19'),
+(100051, 'YY', 'Nguyễn', '0914000006', 8500000.00, 'Nhân viên lái xe vale', '1990-06-20'),
+(100052, 'ZZ', 'Trần', '0914000007', 8500000.00, 'Nhân viên lái xe vale', '1991-07-21'),
+(100053, 'AAA', 'Lê', '0914000008', 8500000.00, 'Nhân viên lái xe vale', '1992-08-22'),
+(100054, 'BBB', 'Phạm', '0914000009', 8500000.00, 'Nhân viên lái xe vale', '1993-09-23'),
+(100055, 'CCC', 'Hoàng', '0914000010', 8500000.00, 'Nhân viên lái xe vale', '1994-10-24'),
+(100056, 'DDD', 'Nguyễn', '0914000011', 8500000.00, 'Nhân viên lái xe vale', '1995-11-25'),
+(100057, 'EEE', 'Trần', '0914000012', 8500000.00, 'Nhân viên lái xe vale', '1996-12-26'),
+(100058, 'FFF', 'Lê', '0914000013', 8500000.00, 'Nhân viên lái xe vale', '1997-01-27'),
+(100059, 'GGG', 'Phạm', '0914000014', 8500000.00, 'Nhân viên lái xe vale', '1998-02-28'),
+(100060, 'HHH', 'Hoàng', '0914000015', 8500000.00, 'Nhân viên lái xe vale', '1999-03-01');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) 
+VALUES
+(100061, 'III', 'Nguyễn', '0915000001', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1985-01-15'),
+(100062, 'JJJ', 'Trần', '0915000002', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1986-02-16'),
+(100063, 'KKK', 'Lê', '0915000003', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1987-03-17'),
+(100064, 'LLL', 'Phạm', '0915000004', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1988-04-18'),
+(100065, 'MMM', 'Hoàng', '0915000005', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1989-05-19'),
+(100066, 'NNN', 'Nguyễn', '0915000006', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1990-06-20'),
+(100067, 'OOO', 'Trần', '0915000007', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1991-07-21'),
+(100068, 'PPP', 'Lê', '0915000008', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1992-08-22'),
+(100069, 'QQQ', 'Phạm', '0915000009', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1993-09-23'),
+(100070, 'RRR', 'Hoàng', '0915000010', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1994-10-24'),
+(100071, 'SSS', 'Nguyễn', '0915000011', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1995-11-25'),
+(100072, 'TTT', 'Trần', '0915000012', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1996-12-26'),
+(100073, 'UUU', 'Lê', '0915000013', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1997-01-27'),
+(100074, 'VVV', 'Phạm', '0915000014', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1998-02-28'),
+(100075, 'WWW', 'Hoàng', '0915000015', 12000000.00, 'Nhân viên bảo trì kỹ thuật', '1999-03-01');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) 
+VALUES
+(100076, 'XXX', 'Nguyễn', '0916000001', 15000000.00, 'Quản lý bãi đỗ xe', '1985-01-15'),
+(100077, 'YYY', 'Trần', '0916000002', 15000000.00, 'Quản lý bãi đỗ xe', '1986-02-16'),
+(100078, 'ZZZ', 'Lê', '0916000003', 15000000.00, 'Quản lý bãi đỗ xe', '1987-03-17'),
+(100079, 'AAAA', 'Phạm', '0916000004', 15000000.00, 'Quản lý bãi đỗ xe', '1988-04-18'),
+(100080, 'BBBB', 'Hoàng', '0916000005', 15000000.00, 'Quản lý bãi đỗ xe', '1989-05-19'),
+(100081, 'CCCC', 'Nguyễn', '0916000006', 15000000.00, 'Quản lý bãi đỗ xe', '1990-06-20'),
+(100082, 'DDDD', 'Trần', '0916000007', 15000000.00, 'Quản lý bãi đỗ xe', '1991-07-21'),
+(100083, 'EEEE', 'Lê', '0916000008', 15000000.00, 'Quản lý bãi đỗ xe', '1992-08-22'),
+(100084, 'FFFF', 'Phạm', '0916000009', 15000000.00, 'Quản lý bãi đỗ xe', '1993-09-23'),
+(100085, 'GGGG', 'Hoàng', '0916000010', 15000000.00, 'Quản lý bãi đỗ xe', '1994-10-24'),
+(100086, 'HHHH', 'Nguyễn', '0916000011', 15000000.00, 'Quản lý bãi đỗ xe', '1995-11-25'),
+(100087, 'IIII', 'Trần', '0916000012', 15000000.00, 'Quản lý bãi đỗ xe', '1996-12-26'),
+(100088, 'JJJJ', 'Lê', '0916000013', 15000000.00, 'Quản lý bãi đỗ xe', '1997-01-27'),
+(100089, 'KKKK', 'Phạm', '0916000014', 15000000.00, 'Quản lý bãi đỗ xe', '1998-02-28'),
+(100090, 'LLLL', 'Hoàng', '0916000015', 15000000.00, 'Quản lý bãi đỗ xe', '1999-03-01');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate)
+VALUES
+(100091, 'A', 'Nguyễn', '0912345678', 8000000.00, 'Nhân viên chăm sóc khách hàng', '1985-05-15'),
+(100092, 'B', 'Trần', '0912345679', 8000000.00, 'Nhân viên chăm sóc khách hàng', '1986-06-16'),
+(100093, 'C', 'Lê', '0912345680', 8000000.00, 'Nhân viên chăm sóc khách hàng', '1987-07-17'),
+(100094, 'D', 'Phạm', '0912345681', 8000000.00, 'Nhân viên chăm sóc khách hàng', '1988-08-18'),
+(100095, 'E', 'Hoàng', '0912345682', 8000000.00, 'Nhân viên chăm sóc khách hàng', '1989-09-19'),
+(100096, 'F', 'Nguyễn', '0912345683', 8000000.00, 'Nhân viên chăm sóc khách hàng', '1990-10-20');
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate)
+VALUES
+(100097, 'G', 'Nguyễn', '0912345684', 10000000.00, 'Bảo vệ', '1991-11-21'),
+(100098, 'H', 'Trần', '0912345685', 10000000.00, 'Bảo vệ', '1992-12-22'),
+(100099, 'I', 'Lê', '0912345686', 10000000.00, 'Bảo vệ', '1993-01-23'),
+(100100, 'J', 'Phạm', '0912345687', 10000000.00, 'Bảo vệ', '1994-02-24'),
+(100101, 'K', 'Hoàng', '0912345688', 10000000.00, 'Bảo vệ', '1995-03-25'),
+(100102, 'L', 'Nguyễn', '0912345689', 10000000.00, 'Bảo vệ', '1996-04-26'),
+(100103, 'M', 'Nguyễn', '0912345690', 10000000.00, 'Bảo vệ', '1997-05-27'),
+(100104, 'N', 'Trần', '0912345691', 10000000.00, 'Bảo vệ', '1998-06-28'),
+(100105, 'O', 'Lê', '0912345692', 10000000.00, 'Bảo vệ', '1999-07-29'),
+(100106, 'P', 'Phạm', '0912345693', 10000000.00, 'Bảo vệ', '2000-08-30'),
+(100107, 'Q', 'Hoàng', '0912345694', 10000000.00, 'Bảo vệ', '2001-09-01'),
+(100108, 'R', 'Nguyễn', '0912345695', 10000000.00, 'Bảo vệ', '2002-10-02'),
+(100109, 'S', 'Trần', '0912345696', 10000000.00, 'Bảo vệ', '2003-11-03'),
+(100110, 'T', 'Lê', '0912345697', 10000000.00, 'Bảo vệ', '2004-12-04'),
+(100111, 'U', 'Phạm', '0912345698', 10000000.00, 'Bảo vệ', '2005-01-05');
+
+INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca sáng', '06:00:00', '14:00:00');
+INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca chiều', '14:00:00', '22:00:00');
+INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca đêm', '22:00:00', '06:00:00');
 
 
-INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00');
-INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00');
-INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00');
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100001, 1, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 1),
+(100002, 1, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 2),
+(100003, 1, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 3),
+(100004, 1, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 4),
+(100005, 1, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 5),
+(100006, 2, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 1),
+(100007, 2, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 2),
+(100008, 2, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 3),
+(100009, 2, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 4),
+(100010, 2, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 5),
+(100011, 3, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 1),
+(100012, 3, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 2),
+(100013, 3, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 3),
+(100014, 3, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 4),
+(100015, 3, 'Hướng dẫn xe vào đúng vị trí, hỗ trợ khách lấy vé, kiểm tra vé ra vào', 5);
 
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (1, 'Bảo vệ và kiểm vé ca sáng', 100012);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (1, 'Bảo vệ và kiểm vé ca sáng', 100231);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (2, 'Bảo vệ và kiểm vé ca chiều', 100013);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (2, 'Bảo vệ và kiểm vé ca chiều', 100232);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (3, 'Bảo vệ và kiểm vé ca đêm', 100014);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (3, 'Bảo vệ và kiểm vé ca đêm', 100233);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (4, 'Bảo vệ và kiểm vé ca sáng', 100015);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (4, 'Bảo vệ và kiểm vé ca sáng', 100234);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (5, 'Bảo vệ và kiểm vé ca chiều', 100016);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (5, 'Bảo vệ và kiểm vé ca chiều', 100235);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (6, 'Bảo vệ và kiểm vé ca đêm', 100017);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (6, 'Bảo vệ và kiểm vé ca đêm', 100236);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (7, 'Bảo vệ và kiểm vé ca sáng', 100018);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (7, 'Bảo vệ và kiểm vé ca sáng', 100237);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (8, 'Bảo vệ và kiểm vé ca chiều', 100019);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (8, 'Bảo vệ và kiểm vé ca chiều', 100238);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (9, 'Bảo vệ và kiểm vé ca đêm', 100020);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (9, 'Bảo vệ và kiểm vé ca đêm', 100239);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (10, 'Bảo vệ và kiểm vé ca sáng', 100021);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (10, 'Bảo vệ và kiểm vé ca sáng', 100240);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (11, 'Bảo vệ và kiểm vé ca chiều', 100022);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (11, 'Bảo vệ và kiểm vé ca chiều', 100241);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (12, 'Bảo vệ và kiểm vé ca đêm', 100023);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (12, 'Bảo vệ và kiểm vé ca đêm', 100242);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (13, 'Bảo vệ và kiểm vé ca sáng', 100024);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (13, 'Bảo vệ và kiểm vé ca sáng', 100243);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (14, 'Bảo vệ và kiểm vé ca chiều', 100025);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (14, 'Bảo vệ và kiểm vé ca chiều', 100244);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (15, 'Bảo vệ và kiểm vé ca đêm', 100026);
-INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (15, 'Bảo vệ và kiểm vé ca đêm', 100245);
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100016, 1, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 1),
+(100017, 1, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 2),
+(100018, 1, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 3),
+(100019, 1, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 4),
+(100020, 1, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 5),
+(100021, 2, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 1),
+(100022, 2, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 2),
+(100023, 2, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 3),
+(100024, 2, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 4),
+(100025, 2, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 5),
+(100026, 3, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 1),
+(100027, 3, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 2),
+(100028, 3, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 3),
+(100029, 3, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 4),
+(100030, 3, 'Thu phí đỗ xe, xử lý thanh toán, cung cấp biên lai cho khách', 5);
+
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100031, 1, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 1),
+(100032, 1, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 2),
+(100033, 1, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 3),
+(100034, 1, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 4),
+(100035, 1, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 5),
+(100036, 2, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 1),
+(100037, 2, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 2),
+(100038, 2, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 3),
+(100039, 2, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 4),
+(100040, 2, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 5),
+(100041, 3, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 1),
+(100042, 3, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 2),
+(100043, 3, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 3),
+(100044, 3, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 4),
+(100045, 3, 'Quản lý nhân viên, xử lý sự cố, đảm bảo hoạt động bãi xe trơn tru', 5);
+
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100046, 1, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 1),
+(100047, 1, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 2),
+(100048, 1, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 3),
+(100049, 1, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 4),
+(100050, 1, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 5),
+(100051, 2, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 1),
+(100052, 2, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 2),
+(100053, 2, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 3),
+(100054, 2, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 4),
+(100055, 2, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 5),
+(100056, 3, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 1),
+(100057, 3, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 2),
+(100058, 3, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 3),
+(100059, 3, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 4),
+(100060, 3, 'Đỗ xe hộ khách và lấy xe khi khách yêu cầu', 5);
+
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100061, 1, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 1),
+(100062, 1, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 2),
+(100063, 1, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 3),
+(100064, 1, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 4),
+(100065, 1, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 5),
+(100066, 2, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 1),
+(100067, 2, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 2),
+(100068, 2, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 3),
+(100069, 2, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 4),
+(100070, 2, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 5),
+(100071, 3, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 1),
+(100072, 3, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 2),
+(100073, 3, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 3),
+(100074, 3, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 4),
+(100075, 3, 'Bảo trì hệ thống bãi đỗ, sửa chữa máy móc như cổng vé tự động, thang máy', 5);
+
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100076, 1, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 1),
+(100077, 1, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 2),
+(100078, 1, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 3),
+(100079, 1, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 4),
+(100080, 1, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 5),
+(100081, 2, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 1),
+(100082, 2, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 2),
+(100083, 2, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 3),
+(100084, 2, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 4),
+(100085, 2, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 5),
+(100086, 3, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 1),
+(100087, 3, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 2),
+(100088, 3, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 3),
+(100089, 3, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 4),
+(100090, 3, 'Lập kế hoạch hoạt động, quản lý tài chính, và xử lý các yêu cầu đặc biệt từ khách hàng', 5);
+
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100091, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 1),
+(100091, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 2),
+(100091, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 3),
+(100091, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 4),
+(100091, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 5),
+(100092, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 1),
+(100092, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 2),
+(100092, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 3),
+(100092, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 4),
+(100092, 1, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 5),
+(100093, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 1),
+(100093, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 2),
+(100093, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 3),
+(100093, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 4),
+(100093, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 5),
+(100094, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 1),
+(100094, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 2),
+(100094, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 3),
+(100094, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 4),
+(100094, 2, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 5),
+(100095, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 1),
+(100095, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 2),
+(100095, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 3),
+(100095, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 4),
+(100095, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 5),
+(100096, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 1),
+(100096, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 2),
+(100096, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 3),
+(100096, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 4),
+(100096, 3, 'Giải đáp thắc mắc, hỗ trợ khách hàng trong trường hợp mất vé hoặc sự cố khác', 5);
+
+INSERT INTO ShiftsDetails (EmployeeID, ShiftID, TaskDescription, ParkID)
+VALUES
+(100097, 1, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 1),
+(100098, 1, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 2),
+(100099, 1, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 3),
+(100100, 1, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 4),
+(100101, 1, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 5),
+(100102, 2, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 1),
+(100103, 2, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 2),
+(100104, 2, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 3),
+(100105, 2, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 4),
+(100106, 2, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 5),
+(100107, 3, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 1),
+(100108, 3, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 2),
+(100109, 3, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 3),
+(100110, 3, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 4),
+(100111, 3, 'Đảm bảo an ninh, giám sát camera, ngăn chặn các hành vi trộm cắp', 5);
