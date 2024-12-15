@@ -123,7 +123,7 @@ INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndT
 INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải 2-7 tấn', 'Đã có xe', 1, '30N-34567', '2024-12-01 08:22:35', NULL);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Trống', 2, '30R-86420', '2024-12-02 09:03:11', '2024-12-02 14:09:18');
 INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2, '30Q-13579', '2024-12-01 21:03:09', '2024-12-02 05:54:30');
-INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2, '29D-34567', '2024-12-02 11:03:05', '2024-12-02 15:09:25');
+INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Ô tô dưới 9 chỗ ngồi', 'Trống', 2, '29D-34567', '2024-12-01 07:53:05', '2024-12-02 15:09:25');
 INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải dưới 2 tấn', 'Đã có xe', 2, '30K-01234', '2024-12-02 03:08:24', NULL);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe tải dưới 2 tấn', 'Trống', 2, NULL, NULL, NULL);
 INSERT INTO ParkingSpot (SpotType, Status, ParkID, LicensePlate, StartTime, EndTime) VALUES ('Xe máy', 'Trống', 3, NULL, NULL, NULL);
@@ -159,7 +159,7 @@ INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('
 INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('31O-45678', '2024-11-30 14:28:42', NULL, 32);
 INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29P-56789', '2024-12-02 08:34:28', NULL, 32);
 INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('31C-23456', '2024-12-02 03:08:24', '2024-12-02 13:48:54', 4);
-INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29D-34567', '2024-12-02 11:03:05', '2024-12-02 15:09:25', 7);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29D-34567', '2024-12-01 07:33:05', '2024-12-02 15:15:25', 7);
 
 
 
