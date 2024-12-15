@@ -62,6 +62,10 @@ CREATE TABLE ParkingSpot (
     SpotType VARCHAR(50),
     Status VARCHAR(20),
     ParkID INT NOT NULL,
+    LicensePlate VARCHAR(15),                   
+    StartTime DATETIME,                          
+    EndTime DATETIME,
+    FOREIGN KEY (LicensePlate) REFERENCES Vehicles(LicensePlate) ON DELETE CASCADE,
     FOREIGN KEY (ParkID) REFERENCES ParkingLot(ParkID) ON DELETE CASCADE
 );
 
