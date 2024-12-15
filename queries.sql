@@ -54,38 +54,38 @@ ORDER BY T.ExpiredTime ASC;
 -- ==================== d. Sử dụng subquery trong FROM ====================
 -- Thống kê số lượng dịch vụ được đăng ký theo từng ngày và số lượng khách hàng tham gia
 SELECT 
-    DailyServiceStats.ServiceDate, -- Ngày đăng ký dịch vụ
-    DailyServiceStats.TotalServices AS TotalServicesRegistered, -- Tổng số dịch vụ được đăng ký trong ngày
-    IFNULL(CustomerStats.TotalCustomers, 0) AS TotalCustomers -- Tổng số khách hàng đăng ký dịch vụ trong ngày
+    DailyServiceStats.ServiceDate, 
+    DailyServiceStats.TotalServices AS TotalServicesRegistered, 
+    IFNULL(CustomerStats.TotalCustomers, 0) AS TotalCustomers 
 FROM (
     -- Subquery: Đếm tổng số dịch vụ đã được đăng ký theo từng ngày
     SELECT 
-        DATE(SR.StartTime) AS ServiceDate, -- Lấy ngày từ thời gian bắt đầu dịch vụ
-        COUNT(SR.ServiceRegistrationID) AS TotalServices -- Tổng số dịch vụ được đăng ký
+        DATE(SR.StartTime) AS ServiceDate, 
+        COUNT(SR.ServiceRegistrationID) AS TotalServices 
     FROM ServiceRegistration SR
-    GROUP BY DATE(SR.StartTime) -- Nhóm theo từng ngày
+    GROUP BY DATE(SR.StartTime) 
 ) AS DailyServiceStats
 -- Subquery: Đếm tổng số khách hàng đăng ký dịch vụ trong ngày
 LEFT JOIN (
     SELECT 
-        DATE(SR.StartTime) AS ServiceDate, -- Ngày đăng ký dịch vụ
-        COUNT(DISTINCT SR.CustomerID) AS TotalCustomers -- Tổng số khách hàng duy nhất đăng ký dịch vụ trong ngày
+        DATE(SR.StartTime) AS ServiceDate,
+        COUNT(DISTINCT SR.CustomerID) AS TotalCustomers 
     FROM ServiceRegistration SR
-    GROUP BY DATE(SR.StartTime) -- Nhóm theo từng ngày
+    GROUP BY DATE(SR.StartTime)
 ) AS CustomerStats ON DailyServiceStats.ServiceDate = CustomerStats.ServiceDate
-ORDER BY DailyServiceStats.ServiceDate DESC; -- Sắp xếp theo ngày giảm dần
+ORDER BY DailyServiceStats.ServiceDate DESC; 
 
 
 -- ==================== e. Truy vấn sử dụng GROUP BY và Aggregate Functions ====================
 -- Thống kê số lượng đăng ký và tổng doanh thu từ mỗi loại dịch vụ
 SELECT 
-    S.ServiceName, -- Tên dịch vụ
-    COUNT(SR.ServiceRegistrationID) AS TotalRegistrations, -- Tổng số lượt đăng ký
-    SUM(S.ServicePrice) AS TotalRevenue -- Tổng doanh thu từ dịch vụ
+    S.ServiceName, 
+    COUNT(SR.ServiceRegistrationID) AS TotalRegistrations,
+    SUM(S.ServicePrice) AS TotalRevenue 
 FROM Services S
 -- Kết nối với bảng đăng ký dịch vụ
 LEFT JOIN ServiceRegistration SR ON S.ServiceID = SR.ServiceID
-GROUP BY S.ServiceName -- Nhóm theo từng loại dịch vụ
-HAVING COUNT(SR.ServiceRegistrationID) > 0 -- Chỉ hiển thị các dịch vụ có đăng ký
-ORDER BY TotalRevenue DESC; -- Sắp xếp theo doanh thu giảm dần
+GROUP BY S.ServiceName 
+HAVING COUNT(SR.ServiceRegistrationID) > 0 
+ORDER BY TotalRevenue DESC; 
 
