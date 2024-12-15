@@ -34,14 +34,14 @@ CREATE TABLE Services (
     VehicleType VARCHAR(50)
 );
 
--- ==================== Table: ServiceUsage (Khách hàng đăng ký dịch vụ) ====================
-CREATE TABLE ServiceUsage (
-    ServiceUsageID INT AUTO_INCREMENT PRIMARY KEY,
+-- ==================== Table: ServiceRegistration (Khách hàng đăng ký dịch vụ) ====================
+CREATE TABLE ServiceRegistration (
+    ServiceRegistrationID INT AUTO_INCREMENT PRIMARY KEY,
     ServiceID INT NOT NULL,
     CustomerID INT NOT NULL,
     LicensePlate VARCHAR(15) NOT NULL,
     StartTime DATETIME,
-    EndTime DATETIME,
+    EndTime DATETIME,   
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID) ON DELETE CASCADE,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE,
     FOREIGN KEY (LicensePlate) REFERENCES Vehicles(LicensePlate) ON DELETE CASCADE
