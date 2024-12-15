@@ -33,22 +33,14 @@ LEFT JOIN Shifts S ON SD.ShiftID = S.ShiftID
 ORDER BY PL.ParkID;
 
 -- ==================== c. Sử dụng subquery trong WHERE ====================
--- Tìm các phương tiện đã hết hạn vé gửi xe nhưng chưa đăng ký dịch vụ mới
-SELECT 
-    V.LicensePlate,
-    CONCAT(C.FirstName, ' ', C.LastName) AS OwnerName,
-    T.ExpiredTime
-FROM Vehicles V
-INNER JOIN Tickets T ON V.LicensePlate = T.LicensePlate
-INNER JOIN Customers C ON V.CustomerID = C.CustomerID
-WHERE T.ExpiredTime < NOW()
-AND NOT EXISTS (
-    SELECT 1 
+-- Tìm các phương tiện đã vi phạm thời gian sử dụng dịch vụ
+SELECT T.TicketID, T.LicensePlate, T.IssuedTime, T.ExpiredTime
+FROM Tickets T
+WHERE T.LicensePlate IN (
+    SELECT SR.LicensePlate
     FROM ServiceRegistration SR
-    WHERE SR.LicensePlate = V.LicensePlate
-      AND SR.StartTime > T.ExpiredTime
-)
-ORDER BY T.ExpiredTime ASC;
+    WHERE T.IssuedTime < SR.StartTime OR T.ExpiredTime > SR.EndTime
+);
 
 
 -- ==================== d. Sử dụng subquery trong FROM ====================

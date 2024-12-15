@@ -1,49 +1,32 @@
--- Bắt đầu giao dịch (transaction)
+-- SQLBook: Code
+-- Bắt đầu giao dịch
 START TRANSACTION;
 
--- Khai báo các biến cần thiết
-DECLARE @LicensePlate VARCHAR(15);
-DECLARE @ServiceRegistrationID INT;
-DECLARE @CurrentEndTime DATETIME;
-DECLARE @NewEndTime DATETIME;
+-- Tạo savepoint trước khi thực hiện thao tác tiếp theo
+SAVEPOINT BeforeError;
+-- Lệnh 1: Chèn một khách hàng mới
+INSERT INTO Customers (FirstName, LastName, PhoneNumber, Address)
+VALUES ('Lương', 'Nguyễn', '0948667749', 'Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội');
 
--- Tạo con trỏ để lặp qua các vé gửi xe đã hết hạn và phương tiện vẫn còn đỗ trong bãi xe
-DECLARE vehicle_cursor CURSOR FOR
-SELECT V.LicensePlate, SR.ServiceRegistrationID, SR.EndTime
-FROM Vehicles V
-INNER JOIN Tickets T ON V.LicensePlate = T.LicensePlate
-INNER JOIN ServiceRegistration SR ON V.LicensePlate = SR.LicensePlate
-INNER JOIN ParkingSpot PS ON PS.LicensePlate = V.LicensePlate
-WHERE T.ExpiredTime < NOW() -- Vé đã hết hạn
-  AND PS.ParkingSpotID IS NOT NULL -- Xe còn đỗ trong bãi
+-- Lệnh 2: Chèn một phương tiện mới (xe)
+INSERT INTO Vehicles (LicensePlate, CustomerID, Type, Brand, Color)
+VALUES ('98H-03115', LAST_INSERT_ID(), 'Xe Máy', 'Honda', 'Đỏ Đen');
 
-OPEN vehicle_cursor;
 
--- Lặp qua các phương tiện để kiểm tra và gia hạn dịch vụ
-FETCH NEXT FROM vehicle_cursor INTO @LicensePlate, @ServiceRegistrationID, @CurrentEndTime;
+-- Lệnh 3: Giả sử có lỗi trong khi chèn dịch vụ
+-- Với ví dụ này ServiceID không có 999 nên sẽ không thể thêm
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime)
+VALUES (999, LAST_INSERT_ID(), '98H-03115', '2024-12-02 06:00:00', '2024-12-02 18:00:00');
 
-WHILE @@FETCH_STATUS = 0
-BEGIN
-    -- Tính toán thời gian gia hạn (thêm 1 giờ)
-    SET @NewEndTime = DATE_ADD(@CurrentEndTime, INTERVAL 1 HOUR);
+-- Nếu có lỗi xảy ra (ví dụ ServiceID 999 không tồn tại), rollback lại đến savepoint
+-- Lỗi xảy ra ở đây, rollback sẽ hủy bỏ tất cả thao tác sau savepoint
+ROLLBACK TO SAVEPOINT BeforeError;
 
-    -- Cập nhật thời gian kết thúc dịch vụ cho vé xe
-    UPDATE ServiceRegistration
-    SET EndTime = @NewEndTime
-    WHERE ServiceRegistrationID = @ServiceRegistrationID;
+-- Lệnh 4: Tiếp tục thực hiện thao tác sau savepoint nếu cần
+-- Lệnh này sẽ vẫn được thực thi nếu không gặp lỗi và rollback không xảy ra
+UPDATE Vehicles
+SET Color = 'Xanh Dương'
+WHERE LicensePlate = '98H-03115';
 
-    -- Lấy vé tiếp theo
-    FETCH NEXT FROM vehicle_cursor INTO @LicensePlate, @ServiceRegistrationID, @CurrentEndTime;
-END;
-
--- Đóng và giải phóng con trỏ
-CLOSE vehicle_cursor;
-DEALLOCATE vehicle_cursor;
-
--- Nếu không có lỗi, commit giao dịch
+-- Commit giao dịch nếu tất cả lệnh thành công
 COMMIT;
-
-EXCEPTION
-    -- Nếu có lỗi trong quá trình thực hiện, rollback giao dịch
-    WHEN ERROR THEN
-    ROLLBACK;
