@@ -19,11 +19,11 @@ CREATE TABLE Customers (
 -- ==================== Table: Vehicles (Phương tiện) ====================
 CREATE TABLE Vehicles (
     LicensePlate VARCHAR(15) PRIMARY KEY,
-    OwnerID INT NOT NULL,
+    CustomerID INT NOT NULL,
     Type VARCHAR(50),
     Brand VARCHAR(50),
     Color VARCHAR(20),
-    FOREIGN KEY (OwnerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE
 );
 
 -- ==================== Table: Services (Dịch vụ) ====================
