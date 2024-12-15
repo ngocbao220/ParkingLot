@@ -20,11 +20,11 @@ CREATE TABLE Customers (
 -- ==================== Table: Vehicles (Phương tiện) ====================
 CREATE TABLE Vehicles (
     LicensePlate VARCHAR(15) PRIMARY KEY,
-    OwnerID INT NOT NULL,
+    CustomerID INT NOT NULL,
     Type VARCHAR(50),
     Brand VARCHAR(50),
     Color VARCHAR(20),
-    FOREIGN KEY (OwnerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE
 );
 
 -- ==================== Table: Services (Dịch vụ) ====================
@@ -63,6 +63,10 @@ CREATE TABLE ParkingSpot (
     SpotType VARCHAR(50),
     Status VARCHAR(20),
     ParkID INT NOT NULL,
+    LicensePlate VARCHAR(15),                   
+    StartTime DATETIME,                          
+    EndTime DATETIME,
+    FOREIGN KEY (LicensePlate) REFERENCES Vehicles(LicensePlate) ON DELETE CASCADE,
     FOREIGN KEY (ParkID) REFERENCES ParkingLot(ParkID) ON DELETE CASCADE
 );
 
