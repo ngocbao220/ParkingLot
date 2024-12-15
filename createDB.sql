@@ -39,9 +39,9 @@ CREATE TABLE Services (
 -- ==================== Table: ServiceRegistration (Khách hàng đăng ký dịch vụ) ====================
 CREATE TABLE ServiceRegistration (
     ServiceRegistrationID INT AUTO_INCREMENT PRIMARY KEY,
-    ServiceID INT NOT NULL,
+    ServiceID INT,
     CustomerID INT,
-    LicensePlate VARCHAR(15) NOT NULL,
+    LicensePlate VARCHAR(15),
     StartTime DATETIME,
     EndTime DATETIME,   
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID) ON DELETE CASCADE,
@@ -63,7 +63,7 @@ CREATE TABLE ParkingSpot (
     ParkingSpotID INT AUTO_INCREMENT PRIMARY KEY,
     SpotType VARCHAR(50),
     Status VARCHAR(20),
-    ParkID INT NOT NULL,
+    ParkID INT,
     LicensePlate VARCHAR(15),                   
     StartTime DATETIME,                          
     EndTime DATETIME,
@@ -74,10 +74,10 @@ CREATE TABLE ParkingSpot (
 -- ==================== Table: Tickets (Vé gửi xe) ====================
 CREATE TABLE Tickets (
     TicketID INT AUTO_INCREMENT PRIMARY KEY,
-    LicensePlate VARCHAR(15) NOT NULL UNIQUE,
-    IssuedTime DATETIME NOT NULL,
+    LicensePlate VARCHAR(15),
+    IssuedTime DATETIME,
     ExpiredTime DATETIME,
-    ServiceID INT NOT NULL,
+    ServiceID INT,
     FOREIGN KEY (LicensePlate) REFERENCES Vehicles(LicensePlate) ON DELETE CASCADE,
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID) ON DELETE CASCADE
 );
@@ -103,10 +103,10 @@ CREATE TABLE Shifts (
 
 -- ==================== Table: ShiftsDetails (Chi tiết ca làm việc) ====================
 CREATE TABLE ShiftsDetails (
-    EmployeeID INT NOT NULL,
-    ShiftID INT NOT NULL,
+    EmployeeID INT,
+    ShiftID INT,
     TaskDescription VARCHAR(255),
-    ParkID INT NOT NULL,
+    ParkID INT,
     FOREIGN KEY (ParkID) REFERENCES ParkingLot(ParkID) ON DELETE CASCADE,
     FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID) ON DELETE CASCADE,
     FOREIGN KEY (ShiftID) REFERENCES Shifts(ShiftID) ON DELETE CASCADE
