@@ -84,36 +84,36 @@ INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi the
 INSERT INTO Services (ServiceName, ServicePrice, VehicleType) VALUES ('Gửi theo tháng', 5000000.00, 'Xe tải trên 13 tấn');
 
 
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (1, '29H-34567', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (1, '29P-24680', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (5, '30R-86420', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (6, '30Q-13579', CAST('2024-12-01 18:00:00' AS DateTime), CAST('2024-12-02 06:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (22, '30S-97531', CAST('2024-12-01 18:00:00' AS DateTime), CAST('2024-12-02 06:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '29A-12345', CAST('2024-12-01 08:00:00' AS DateTime), CAST('2025-01-01 08:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '30B-67890', CAST('2024-11-30 20:00:00' AS DateTime), CAST('2024-12-30 20:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (4, '31C-23456', CAST('2024-11-30 19:00:00' AS DateTime), CAST('2024-12-30 19:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (7, '29D-34567', CAST('2024-12-01 07:30:00' AS DateTime), CAST('2024-12-02 07:30:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (8, '30E-45678', CAST('2024-11-23 07:30:00' AS DateTime), CAST('2024-12-23 07:30:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (12, '31F-56789', CAST('2024-12-01 09:00:00' AS DateTime), CAST('2025-01-01 09:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (12, '29G-67890', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2025-01-01 10:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (15, '30H-78901', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2024-12-02 10:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (16, '31I-89012', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2025-01-01 10:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (20, '29J-90123', CAST('2024-12-01 09:00:00' AS DateTime), CAST('2025-01-01 09:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (24, '30K-01234', CAST('2024-11-25 10:00:00' AS DateTime), CAST('2024-12-25 10:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (24, '31L-12345', CAST('2024-11-27 17:00:00' AS DateTime), CAST('2024-12-27 17:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (28, '29M-23456', CAST('2024-11-26 14:00:00' AS DateTime), CAST('2024-12-26 14:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (28, '30N-34567', CAST('2024-11-24 13:00:00' AS DateTime), CAST('2024-12-24 13:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (32, '31O-45678', CAST('2024-11-29 10:00:00' AS DateTime), CAST('2024-12-29 10:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (32, '29P-56789', CAST('2024-12-01 08:00:00' AS DateTime), CAST('2025-01-01 08:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (36, '30Q-67890', CAST('2024-11-26 20:00:00' AS DateTime), CAST('2024-12-26 20:00:00' AS DateTime));
-INSERT INTO ServiceUsage (ServiceID, LicensePlate, StartTime, EndTime) VALUES (36, '31R-78901', CAST('2024-12-02 09:00:00' AS DateTime), CAST('2025-01-02 09:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (1, NULL, '29H-34567', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (1, NULL, '29P-24680', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (5, NULL, '30R-86420', CAST('2024-12-02 06:00:00' AS DateTime), CAST('2024-12-02 18:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (6, NULL, '30Q-13579', CAST('2024-12-01 18:00:00' AS DateTime), CAST('2024-12-02 06:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (22, NULL, '30S-97531', CAST('2024-12-01 18:00:00' AS DateTime), CAST('2024-12-02 06:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (4, 1, '29A-12345', CAST('2024-12-01 08:00:00' AS DateTime), CAST('2025-01-01 08:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (4, 2, '30B-67890', CAST('2024-11-30 20:00:00' AS DateTime), CAST('2024-12-30 20:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (4, 3, '31C-23456', CAST('2024-11-30 19:00:00' AS DateTime), CAST('2024-12-30 19:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (7, 4, '29D-34567', CAST('2024-12-01 07:30:00' AS DateTime), CAST('2024-12-02 07:30:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (8, 5, '30E-45678', CAST('2024-11-23 07:30:00' AS DateTime), CAST('2024-12-23 07:30:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (12, 6, '31F-56789', CAST('2024-12-01 09:00:00' AS DateTime), CAST('2025-01-01 09:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (12, 7, '29G-67890', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2025-01-01 10:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (15, 8, '30H-78901', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2024-12-02 10:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (16, 9, '31I-89012', CAST('2024-12-01 10:00:00' AS DateTime), CAST('2025-01-01 10:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (20, 10, '29J-90123', CAST('2024-12-01 09:00:00' AS DateTime), CAST('2025-01-01 09:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (24, 11, '30K-01234', CAST('2024-11-25 10:00:00' AS DateTime), CAST('2024-12-25 10:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (24, 12, '31L-12345', CAST('2024-11-27 17:00:00' AS DateTime), CAST('2024-12-27 17:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (28, 13, '29M-23456', CAST('2024-11-26 14:00:00' AS DateTime), CAST('2024-12-26 14:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (28, 14, '30N-34567', CAST('2024-11-24 13:00:00' AS DateTime), CAST('2024-12-24 13:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (32, 15, '31O-45678', CAST('2024-11-29 10:00:00' AS DateTime), CAST('2024-12-29 10:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (32, 16, '29P-56789', CAST('2024-12-01 08:00:00' AS DateTime), CAST('2025-01-01 08:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (36, 17, '30Q-67890', CAST('2024-11-26 20:00:00' AS DateTime), CAST('2024-12-26 20:00:00' AS DateTime));
+INSERT INTO ServiceRegistration (ServiceID, CustomerID, LicensePlate, StartTime, EndTime) VALUES (36, 18, '31R-78901', CAST('2024-12-02 09:00:00' AS DateTime), CAST('2025-01-02 09:00:00' AS DateTime));
 
 
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe A', 'Hoạt động', 100);
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe B', 'Hoạt động', 50);
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe C', 'Hoạt động', 130);
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe D', 'Hoạt động', 200);
-INSERT INTO Park (ParkName, Status, Capacity) VALUES ('Bãi đỗ xe E', 'Đang sửa chữa', 80);
+INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe A', 'Hết chỗ', 100, 'Phường Nghĩa Tân, Quận Cầu Giấy, Hà Nội');
+INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe B', 'Còn chỗ', 50, 'Phường Trung Hòa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe C', 'Còn chỗ', 130, 'Phường Yên Hòa, Quận Cầu Giấy, Hà Nội');
+INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe D', 'Còn chỗ', 200, 'Phường Mai Dịch, Quận Cầu Giấy, Hà Nội');
+INSERT INTO ParkingLot (ParkName, Status, Capacity, Address) VALUES ('Bãi đỗ xe E', 'Còn chỗ', 80, 'Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội');
 
 
 INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe máy', 'Đã có xe', 1);
@@ -144,23 +144,22 @@ INSERT INTO ParkingSpot (SpotType, Status, ParkID) VALUES ('Xe tải trên 13 t�
 
 
 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29H-34567', 1, '2024-12-02 07:34:26', NULL); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29P-24680', 2, '2024-12-02 07:54:28', NULL); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29A-12345', 3, '2024-12-02 08:26:02', NULL); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30S-97531', 4, '2024-12-01 22:03:18', '2024-12-02 04:56:36');
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30N-34567', 5, '2024-12-01 08:22:35', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30R-86420', 7, '2024-12-02 9:03:11', '2024-12-02 14:09:18'); 
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30Q-13579', 8, '2024-12-01 21:03:09', '2024-12-02 05:54:30');
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30B-67890', 11, '2024-12-02 08:46:12', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31F-56789', 12, '2024-12-01 16:33:39', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30H-78901', 17, '2024-12-02 11:13:06', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29M-23456', 14, '2024-12-02 03:08:24', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30N-34567', 15, '2024-12-02 03:10:36', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('30K-01234', 9, '2024-12-02 03:08:24', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31O-45678', 19, '2024-11-30 14:28:42', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29P-56789', 20, '2024-12-02 08:34:28', NULL);
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('31C-23456', 16, '2024-12-02 03:08:24', '2024-12-02 13:48:54');
-INSERT INTO ParkingAssignment (LicensePlate, ParkingSpotID, StartTime, EndTime) VALUES ('29D-34567', 8, '2024-12-02 11:03:05', '2024-12-02 15:09:25');
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29H-34567', '2024-12-02 07:34:26', NULL, 1); 
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29P-24680', '2024-12-02 07:54:28', NULL, 1); 
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29A-12345', '2024-12-02 08:26:02', NULL, 4); 
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30S-97531', '2024-12-01 22:03:18', '2024-12-02 04:56:36', 22);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30N-34567', '2024-12-01 08:22:35', NULL, 28);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30R-86420', '2024-12-02 9:03:11', '2024-12-02 14:09:18', 5); 
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30Q-13579', '2024-12-01 21:03:09', '2024-12-02 05:54:30', 6);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30B-67890', '2024-12-02 08:46:12', NULL, 4);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('31F-56789', '2024-12-01 16:33:39', NULL, 12);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30H-78901', '2024-12-02 11:13:06', NULL, 15);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29M-23456', '2024-12-02 03:08:24', NULL, 28);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('30K-01234', '2024-12-02 03:08:24', NULL, 24);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('31O-45678', '2024-11-30 14:28:42', NULL, 32);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29P-56789', '2024-12-02 08:34:28', NULL, 32);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('31C-23456', '2024-12-02 03:08:24', '2024-12-02 13:48:54', 4);
+INSERT INTO Tickets (LicensePlate, IssuedTime, ExpiredTime, ServiceID) VALUES ('29D-34567', '2024-12-02 11:03:05', '2024-12-02 15:09:25', 7);
 
 
 
@@ -199,22 +198,9 @@ INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, Job
 INSERT INTO Employees (EmployeeID, FirstName, LastName, PhoneNumber, Salary, JobTitle, BirthDate) VALUES (100791, 'GG', 'Lê', '0943546578', 12000000.00, 'Kỹ thuật', '1995-02-17');
 
 
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (1, 'Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00', 1);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (2, 'Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00', 1);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (3, 'Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00', 1);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (4, 'Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00', 2);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (5, 'Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00', 2);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (6, 'Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00', 2);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (7, 'Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00', 3);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (8, 'Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00', 3);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (9, 'Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00', 3);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (10, 'Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00', 4);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (11, 'Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00', 4);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (12, 'Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00', 4);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (13, 'Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00', 5);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (14, 'Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00', 5);
-INSERT INTO Shifts (ShiftID, ShiftName, StartTime, EndTime, ParkID) VALUES (15, 'Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00', 5);
-
+INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca sáng', '2024-12-01 06:00:00', '2024-12-01 14:00:00');
+INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca chiều', '2024-12-01 14:00:00', '2024-12-01 22:00:00');
+INSERT INTO Shifts (ShiftName, StartTime, EndTime) VALUES ('Ca đêm', '2024-12-01 22:00:00', '2024-12-02 06:00:00');
 
 INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (1, 'Bảo vệ và kiểm vé ca sáng', 100012);
 INSERT INTO TasksInShift (ShiftID, TaskDescription, EmployeeID) VALUES (1, 'Bảo vệ và kiểm vé ca sáng', 100231);
