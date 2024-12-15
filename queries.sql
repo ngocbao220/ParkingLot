@@ -52,46 +52,40 @@ ORDER BY T.ExpiredTime ASC;
 
 
 -- ==================== d. Sử dụng subquery trong FROM ====================
--- Thống kê số lượng dịch vụ đã được đăng ký theo từng loại phương tiện,
--- đồng thời hiển thị tổng số lượng phương tiện cho mỗi loại.
+-- Thống kê số lượng dịch vụ được đăng ký theo từng ngày và số lượng khách hàng tham gia
 SELECT 
-    VehicleStats.Type AS VehicleType,
-    VehicleStats.TotalVehicles,
-    IFNULL(SUM(ServiceCounts.ServiceCount), 0) AS TotalServiceRegistrations
+    DailyServiceStats.ServiceDate, -- Ngày đăng ký dịch vụ
+    DailyServiceStats.TotalServices AS TotalServicesRegistered, -- Tổng số dịch vụ được đăng ký trong ngày
+    IFNULL(CustomerStats.TotalCustomers, 0) AS TotalCustomers -- Tổng số khách hàng đăng ký dịch vụ trong ngày
 FROM (
+    -- Subquery: Đếm tổng số dịch vụ đã được đăng ký theo từng ngày
     SELECT 
-        Type,
-        COUNT(LicensePlate) AS TotalVehicles
-    FROM Vehicles
-    GROUP BY Type
-) AS VehicleStats
+        DATE(SR.StartTime) AS ServiceDate, -- Lấy ngày từ thời gian bắt đầu dịch vụ
+        COUNT(SR.ServiceRegistrationID) AS TotalServices -- Tổng số dịch vụ được đăng ký
+    FROM ServiceRegistration SR
+    GROUP BY DATE(SR.StartTime) -- Nhóm theo từng ngày
+) AS DailyServiceStats
+-- Subquery: Đếm tổng số khách hàng đăng ký dịch vụ trong ngày
 LEFT JOIN (
     SELECT 
-        V.Type,
-        COUNT(SR.ServiceRegistrationID) AS ServiceCount
-    FROM Vehicles V
-    INNER JOIN ServiceRegistration SR ON V.LicensePlate = SR.LicensePlate
-    GROUP BY V.Type
-) AS ServiceCounts ON VehicleStats.Type = ServiceCounts.Type
-GROUP BY VehicleStats.Type
-ORDER BY TotalServiceRegistrations DESC;
+        DATE(SR.StartTime) AS ServiceDate, -- Ngày đăng ký dịch vụ
+        COUNT(DISTINCT SR.CustomerID) AS TotalCustomers -- Tổng số khách hàng duy nhất đăng ký dịch vụ trong ngày
+    FROM ServiceRegistration SR
+    GROUP BY DATE(SR.StartTime) -- Nhóm theo từng ngày
+) AS CustomerStats ON DailyServiceStats.ServiceDate = CustomerStats.ServiceDate
+ORDER BY DailyServiceStats.ServiceDate DESC; -- Sắp xếp theo ngày giảm dần
+
 
 -- ==================== e. Truy vấn sử dụng GROUP BY và Aggregate Functions ====================
--- Thống kê tổng số lượt gửi xe và tổng doanh thu từ dịch vụ gửi xe tại mỗi bãi đỗ xe,
--- chỉ hiển thị những bãi đỗ xe có tổng doanh thu lớn hơn 500.000.
+-- Thống kê số lượng đăng ký và tổng doanh thu từ mỗi loại dịch vụ
 SELECT 
-    PL.ParkName,
-    COUNT(T.TicketID) AS TotalTickets,
-    SUM(S.ServicePrice) AS TotalRevenue
-FROM ParkingLot PL
-INNER JOIN ParkingSpot PS ON PL.ParkID = PS.ParkID
-INNER JOIN ServiceRegistration SR ON PS.ParkingSpotID = (
-    SELECT ParkingSpotID 
-    FROM Vehicles V 
-    WHERE V.LicensePlate = SR.LicensePlate LIMIT 1
-)
-INNER JOIN Tickets T ON SR.LicensePlate = T.LicensePlate
-INNER JOIN Services S ON T.ServiceID = S.ServiceID
-GROUP BY PL.ParkName
-HAVING SUM(S.ServicePrice) > 500000
-ORDER BY TotalRevenue DESC;
+    S.ServiceName, -- Tên dịch vụ
+    COUNT(SR.ServiceRegistrationID) AS TotalRegistrations, -- Tổng số lượt đăng ký
+    SUM(S.ServicePrice) AS TotalRevenue -- Tổng doanh thu từ dịch vụ
+FROM Services S
+-- Kết nối với bảng đăng ký dịch vụ
+LEFT JOIN ServiceRegistration SR ON S.ServiceID = SR.ServiceID
+GROUP BY S.ServiceName -- Nhóm theo từng loại dịch vụ
+HAVING COUNT(SR.ServiceRegistrationID) > 0 -- Chỉ hiển thị các dịch vụ có đăng ký
+ORDER BY TotalRevenue DESC; -- Sắp xếp theo doanh thu giảm dần
+
